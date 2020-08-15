@@ -10,6 +10,7 @@ import { siteName, siteTheme } from './site-config'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import { CheckIn } from './pages/CheckIn'
+import { NotFound } from './pages/NotFound'
 
 const AppBar = (props) => (
   <Box
@@ -34,6 +35,7 @@ export const App = () => {
       <BrowserRouter>
         <Switch>
           <Route exact path="/:venueId/:venueCode" component={CheckIn} />
+          <Route component={NotFound} />
         </Switch>
       </BrowserRouter>
     </Grommet>
