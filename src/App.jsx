@@ -1,9 +1,14 @@
 import React from 'react';
 import {
+  Anchor,
+  Button,
   Box,
-  Heading,
   Grommet,
+  Heading,
+  Text,
 } from "grommet";
+
+import { Map } from "grommet-icons";
 
 import { siteName, siteTheme } from './site-config'
 
@@ -29,15 +34,22 @@ export const App = () => {
 
   return (
     <Grommet theme={siteTheme} themeMode="light" full>
-      <AppBar>
-        <Heading level='3' margin='none'>{siteName}</Heading>
-      </AppBar>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/:venueId/:venueCode" component={CheckIn} />
-          <Route component={NotFound} />
-        </Switch>
-      </BrowserRouter>
+      <Box fill background="light-2">
+        <AppBar>
+          <Button
+            plain
+            href={process.env.REACT_APP_MAIN_SITE}
+            icon={<Map color="white" />}
+            label={<Heading level='3' color="white" margin='none'>{siteName}</Heading>}
+          />
+        </AppBar>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/:venueId/:venueCode" component={CheckIn} />
+            <Route component={NotFound} />
+          </Switch>
+        </BrowserRouter>
+      </Box>
     </Grommet>
   );
 }
