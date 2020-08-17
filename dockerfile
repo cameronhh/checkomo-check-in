@@ -5,6 +5,7 @@ RUN rm package-lock.json
 RUN yarn install
 COPY ./ /app/
 ENV REACT_APP_API_BASE https://checkin.checkomo.com/api
+ENV REACT_APP_MAIN_SITE=https://checkomo.com
 RUN yarn build
 
 FROM nginx:1.19.1-alpine
