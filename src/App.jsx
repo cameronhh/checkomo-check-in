@@ -26,6 +26,7 @@ const AppBar = (props) => (
     background='brand'
     pad={{ vertical: 'medium' }}
     margin={{ bottom: 'medium' }}
+    elevation="small"
     {...props}
   />
 );
