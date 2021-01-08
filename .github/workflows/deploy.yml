@@ -16,7 +16,7 @@ jobs:
       - name: Build
         env:
           REACT_APP_API_URL: ${{ secrets.REACT_APP_API_BASE }}
-          REACT_APP_API_URL: ${{ secrets.REACT_APP_MAIN_SITE }}
+          REACT_APP_MAIN_SITE: ${{ secrets.REACT_APP_MAIN_SITE }}
         run: yarn build
 
       - name: Copy repository contents via scp
