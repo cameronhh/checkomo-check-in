@@ -1,14 +1,14 @@
-import React from "react";
-import { Button, Box, Grommet, Heading } from "grommet";
+import React from 'react';
+import { Button, Box, Grommet, Heading } from 'grommet';
 
-import { Map } from "grommet-icons";
+import { Map } from 'grommet-icons';
 
-import { siteName, siteTheme } from "./site-config";
+import { siteName, siteTheme } from './site-config';
 
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import { CheckIn } from "./pages/CheckIn";
-import { NotFound } from "./pages/NotFound";
+import { CheckIn } from './pages/CheckIn';
+import { NotFound } from './pages/NotFound';
 
 const AppBar = (props) => (
   <Box
@@ -17,8 +17,8 @@ const AppBar = (props) => (
     align="center"
     justify="center"
     background="brand"
-    pad={{ vertical: "medium" }}
-    margin={{ bottom: "medium" }}
+    pad={{ vertical: 'medium' }}
+    margin={{ bottom: 'medium' }}
     elevation="small"
     {...props}
   />
