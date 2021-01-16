@@ -16,7 +16,7 @@
     "uuid": "^8.2.0"
   },
   "scripts": {
-    "start": "PORT=3001 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -39,6 +39,7 @@
   "prettier": {
     "singleQuote": true,
     "printWidth": 100,
-    "tabWidth": 2
+    "tabWidth": 2,
+    "semi": true
   }
 }
